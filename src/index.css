@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "./styles/fonts.css";
+
+:root {
+  font-family: "General Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --background: #e5f1ff;
+  --blue: #007aff;
+  --white: #ffffff;
+  --text-dark: #000000;
+  --text-muted: #8c97a8;
+  --border: #6c788f;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text-dark);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header {
+  @apply flex justify-between items-center p-5 rounded-[12.5rem] shadow-[#0C0C0D0D] mt-10 h-20.25 w-[90vw] lg:w-[70vw] gap-4;
+  background-color: var(--white);
+}
+
+.nav-links {
+  @apply hidden md:flex gap-4 items-center h-9.5;
+}
+
+.drawer-nav-links {
+  @apply flex flex-col gap-4;
+}
+
+.nav-links a,
+.drawer-nav-links a {
+  @apply no-underline;
+  color: var(--text-muted);
+}
+
+.nav-links a:hover,
+.drawer-nav-links a:hover {
+  color: var(--text-dark);
+}
+
+.description {
+  @apply max-w-146.5 text-[1.125rem] mt-6 mb-12;
+  color: var(--text-dark);
+}
